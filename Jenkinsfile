@@ -36,8 +36,8 @@ pipeline {
       steps {
         node('eks-master-node'){
           checkout scm
-         sh '/home/ec2-user/workspace/address-service kubectl apply -f deployment.yaml . ' 
-         sh '/home/ec2-user/workspace/address-service kubectl apply -f service.yaml . ' 
+         sh '/home/ec2-user/workspace/address-service kubectl apply -f deployment.yaml .' 
+         sh ' kubectl apply -f service.yaml ' 
         }
       }
     } 
